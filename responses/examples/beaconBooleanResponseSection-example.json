@@ -1,0 +1,4 @@
+{
+  "$schema": "../sections/beaconBooleanResponseSection.json",  
+  "exists":true
+}

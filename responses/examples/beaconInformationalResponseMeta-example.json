@@ -1,0 +1,6 @@
+{
+  "$schema": "../beaconInformationalResponseMeta.json",  
+  "beaconId":"org.examplebeacons.beacon-v2",
+  "apiVersion":"v2.0.draft4",
+  "returnedSchemas":[]
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../sections/beaconEmptyResultset.json",  
+  "id":"correctEmptyResultSet",
+  "type":"dataset",
+  "exists":"false"
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "description": "Response to be returned when the query recovers no results for this Resultset.\n",
+  "type": "object",
+  "required": ["id", "type", "exists"],
+  "properties": {
+    "id": {
+      "description": "id of the resultSet.\n",
+      "type": "string",
+      "example": "datasetA\n"
+    },
+    "type": {
+      "description": "Entry type of resultSet. It SHOULD MATCH an entry type declared as collection in the Beacon configuration.\n",
+      "type": "string",
+      "default": "dataset"
+    },
+    "exists": {
+      "description": "NOTE: Declared as `string` instead of `boolean`. The reason for that is to allow discrimination of the schema to apply by JSON Schema validators that require using a `string` type.\n",
+      "type": "string",
+      "enum": ["false"]
+    },
+    "extendedInfo": {
+      "description": "Additional details that could be of interest about the Resultset. Provided to clearly enclose any attribute that is not part of the Beacon specification.\n",
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,6 @@
+{
+  "$schema":"../beaconRequestBody.json",
+  "meta": {
+    "apiVersion": "2.0"
+  }
+}

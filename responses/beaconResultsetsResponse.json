@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "description": "Beacon response that includes record level details, grouped in Resultsets.\n",
+  "type": "object",
+  "allOf": [
+    {
+      "description": "Section of the Response that does not include record level details and just `boolean` or `count` responses.\n",
+      "$ref": "../responses/beaconCoreResponse.json"
+    },
+    {
+      "$ref": "./sections/beaconResultSets.json"
+    }
+  ]
+}

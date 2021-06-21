@@ -1,0 +1,19 @@
+{
+  "$schema":"../validation/filteringTerms.json",
+  "filters":
+  [
+    {
+      "id": "HP:0002664",
+      "includeDescendantTerms": true,
+      "similarity": "exact"
+    },
+    {
+      "id": "age",
+      "operator": ">=",
+      "value": "P70Y"
+    },
+    {
+      "id": "demographic.ethnicity:asian"
+    }
+  ]
+}
