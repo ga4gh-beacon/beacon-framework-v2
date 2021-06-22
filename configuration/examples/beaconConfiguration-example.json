@@ -27,13 +27,7 @@
       "aCollectionOf": [{ "id": "exampleEntry", "name": "Example entries" }],
       "endpoint": "/datasets",
       "filteringTermsReference": "./datasets/filteringTerms.json",
-      "additionalSupportedSchemas": [],
-      "relatedEntryTypes": {
-        "entryTypeId": "exampleEntry",
-        "relationDescription": "This endpoint returns the entries included in this dataset.",
-        "relationEndpoint": "/datasets/{id}/exampleEntries",
-        "partOfBeaconSpecification": true
-      }
+      "additionalSupportedSchemas": []
     },
     "exampleEntry": {
       "id": "exampleEntry",
