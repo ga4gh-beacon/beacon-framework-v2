@@ -7,12 +7,12 @@
     "errorMessage": "the provided parameters are incomplete. 'xyz' is missing."
   },
   "listOfSchemas": [
-    { "entityType": "EntryTypeA", "schema:": "entry-typeA-schema-v0.1" },
-    { "entityType": "EntryTypeB", "schema:": "entry-typeB-schema-v1.0" }
+    { "entityType": "EntryTypeA", "schema": "entry-typeA-schema-v0.1" },
+    { "entityType": "EntryTypeB", "schema": "entry-typeB-schema-v1.0" }
   ],
   "schemasPerEntity": {
     "entityType": "Individual",
-    "schema:": "ga4gh-phenopacket-individual-v0.1"
+    "schema": "ga4gh-phenopacket-individual-v0.1"
   },
   "pagination": {
     "skip": 0,

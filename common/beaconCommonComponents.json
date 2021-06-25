@@ -54,7 +54,7 @@
           "example": "Individual",
           "$comment": "TO REVIEW: Should that refer to a concept d? or would that include an undesired dependency to the configuration?"
         },
-        "schema:": {
+        "schema": {
           "type": "string",
           "examples": [
             "./ga4gh-beacon-dataset-v2.0.0",
