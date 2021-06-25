@@ -3,12 +3,14 @@
   "meta": {
     "apiVersion": "2.0",
     "requestedSchemas": [
-      { "entityType": "EntryTypeA", "schema:": "entry-typeA-schema-v0.1"}
+      { "entityType": "EntryTypeA", "schema": "entry-typeA-schema-v0.1"}
     ]
   },
   "query": {
     "requestParameters": {
-     "Datasets": ["DatasetXYZ"]
+      "datasets": {
+        "datasetIds": ["DatasetXYZ", "Dataset123"]
+      }
     },
     "filters": [ 
       {"id": "EFO:0001212"}
