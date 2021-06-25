@@ -40,7 +40,6 @@
         { "$ref":"#/components/parameters/requestedSchema" }
       ],
       "get": {
-        "deprecated": true,
         "description": "Get information about the beacon\n",
         "operationId": "getBeaconInfoRoot",
         "tags": [
@@ -115,7 +114,7 @@
         }
       }
     },
-    "/entryTypes": {
+    "/entry_types": {
       "get": {
         "description":"TBD.",
         "operationId":"getEntryTypes",
