@@ -4,7 +4,7 @@
   "requestedSchemas": [
     {
       "entityType": "Individual",
-      "schema:": "ga4gh-phenopacket-individual-v0.1"
+      "schema": "ga4gh-phenopacket-individual-v0.1"
     }
   ],
   "requestParameters": [
