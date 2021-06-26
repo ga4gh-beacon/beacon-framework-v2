@@ -13,6 +13,5 @@
     "referenceToSchemaDefinition": "./datasets/defaultSchema.json",
     "schemaVersion": "v.2.draft-3"
   },
-  "aCollectionOf": [{ "id": "exampleEntry", "name": "Example entries" }],
-  "endpoint": "/datasets"
+  "aCollectionOf": [{ "id": "exampleEntry", "name": "Example entries" }]
 }

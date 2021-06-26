@@ -11,6 +11,5 @@
     "id": "bdfGenericEntryType-v2",
     "name": "Beacon v2 default schema for a basic element.",
     "referenceToSchemaDefinition": "https://raw.githubusercontent.com/ga4gh-beacon/specification-v2-default-schemas/master/default_dataset_schema.yaml"
-  },
-  "endpoint": "/individuals"
+  }
 }
