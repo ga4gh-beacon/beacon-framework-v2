@@ -1,5 +1,5 @@
 {
-  "$schema": "../beaconCommonComponents.json",
+  "$schema": "../validation/beaconCommonComponents.json",
   "beaconId": "org.example.beacon.v2",
   "apiVersion": "v2.0",
   "beaconError": {
@@ -19,13 +19,6 @@
     "limit": 10
   },
   "filters": ["BTO:0000199", "PATO:0000383"],
-  "relatedEntities": [
-    { "entity": "Individual", "parameters": [{ "id": "123" }] },
-    {
-      "entity": "genomicVariant",
-      "parameters": [{ "id": "999" }, { "position": "1234556" }]
-    }
-  ],
   "exists": true,
   "numTotalResults": 123,
   "info": {},
