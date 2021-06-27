@@ -114,6 +114,44 @@
         }
       }
     },
+    "/map": {
+      "get": {
+        "description":"TBD.",
+        "operationId":"getBeaconMap",
+        "tags": [
+          "Configuration"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation.\n",
+            "content": {
+              "application/json": {
+                "schema":{
+                  "description": "Response of a request for the Beacon Map of endpoints.\n",
+                  "type": "object",
+                  "required": ["meta","response"],
+                  "properties": {
+                    "meta": {
+                      "description": "TBD.\n",
+                      "$ref":"../beacon-framework-v2/responses/sections/beaconInformationalResponseMeta.json"
+                    },
+                    "response": {
+                      "description": "TBD.\n",
+                      "$ref":"../beacon-framework-v2/configuration/beaconMapSchema.json"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "An unsuccessful operation.\n",
+            "$ref": "../beacon-framework-v2/responses/beaconErrorResponse.json"
+          }
+        }
+      }
+    },
     "/entry_types": {
       "get": {
         "description":"TBD.",
