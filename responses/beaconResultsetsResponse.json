@@ -8,7 +8,7 @@
       "$ref": "../responses/beaconCoreResponse.json"
     },
     {
-      "$ref": "./sections/beaconResultSets.json"
+      "$ref": "./sections/beaconResultsets.json"
     }
   ]
 }
