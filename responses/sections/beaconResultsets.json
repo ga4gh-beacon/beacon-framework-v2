@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "description": "Section of the response that includes the record level details grouped in resultsets.\n",
+  "description": "Section of the response that includes the record level details grouped in Resultsets.\n",
   "type": "object",
   "properties": {
     "$schema": {
@@ -18,8 +18,8 @@
     "resultSetInstance": {
       "type": "object",
       "oneOf": [
-        { "$ref": "../sections/beaconEmptyResultset.json" },
-        { "$ref": "../sections/beaconNonEmptyResultset.json" }
+        { "$ref": "./beaconEmptyResultset.json" },
+        { "$ref": "./beaconNonEmptyResultset.json" }
       ]
     }
   },
