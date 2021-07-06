@@ -9,16 +9,9 @@
       "$ref": "./sections/beaconResponseMeta.json"
     },
     "responseSummary": {
-      "anyOf": [
-        {
-          "description": "Boolean (true/false) response section.\n",
-          "$ref": "./sections/beaconBooleanResponseSection.json"
-        },
-        {
-          "description": "Total number of results section.\n",
-          "$ref": "./sections/beaconCountResponseSection.json"
-        }
-      ]
+      "description": "Response summary, including Boolean and optionally results count.\n",
+      "$ref": "./sections/beaconSummaryResponseSection.json"
+
     },
     "extendedInfo": {
       "description": "Additional details that could be of interest. Provided to clearly enclose any attribute that is not part of the Beacon specification.\n",
