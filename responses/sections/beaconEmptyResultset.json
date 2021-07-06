@@ -19,7 +19,7 @@
       "type": "string",
       "enum": ["false"]
     },
-    "extendedInfo": {
+    "info": {
       "description": "Additional details that could be of interest about the Resultset. Provided to clearly enclose any attribute that is not part of the Beacon specification.\n",
       "type": "object"
     }

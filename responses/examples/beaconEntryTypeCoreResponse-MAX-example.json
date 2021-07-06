@@ -21,7 +21,7 @@
     "exists": true,
     "numTotalResults": 25355
   },
-  "extendedInfo": {
+  "info": {
     "someInterestingStuff": "this is the interesting stuff"
   },
   "beaconHandovers":[
