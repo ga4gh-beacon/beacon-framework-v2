@@ -15,6 +15,7 @@
       ]
     }
   ],
+  "IncludeResultsetResponses": "HIT",
   "filters": [
     "BTO:0000199",
     "PATO:0000383"
