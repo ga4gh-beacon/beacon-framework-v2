@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "description": "Response including a list of Entry types definitions.\n",
+  "properties": {
+    "meta": {
+      "description": "Information about the response that could be relevant for the Beacon client in order to interpret the results.\n",
+      "$ref": "./sections/beaconInformationalResponseMeta.json"
+    },
+    "response": {
+      "description": "Returning the Beacon Entry Types.\n",
+      "$ref": "../configuration/entryTypesSchema.json"
+    }
+  },
+  "required": ["meta", "response"],
+  "additionalProperties": true
+}
