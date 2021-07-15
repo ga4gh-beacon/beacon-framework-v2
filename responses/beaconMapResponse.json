@@ -8,7 +8,7 @@
       "$ref": "./sections/beaconInformationalResponseMeta.json"
     },
     "response": {
-      "description": "Returning an error.\n",
+      "description": "Returning the Beacon Map.\n",
       "$ref": "../configuration/beaconMapSchema.json"
     }
   },
