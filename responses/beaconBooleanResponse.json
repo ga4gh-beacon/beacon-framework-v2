@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "description": "Beacon response that includes record level details, grouped in Resultsets.\n",
+  "description": "Complete definition for a minimal response that does *only* a `boolean` exists true|false answer.\n",
   "type": "object",
   "required": ["meta", "responseSummary"],
   "properties": {
@@ -9,9 +9,8 @@
       "$ref": "./sections/beaconResponseMeta.json"
     },
     "responseSummary": {
-      "description": "Response summary, including Boolean and optionally results count.\n",
-      "$ref": "./sections/beaconSummaryResponseSection.json"
-
+      "description": "Boolean (true/false) response section.\n",
+      "$ref": "./sections/beaconBooleanResponseSection.json"
     },
     "extendedInfo": {
       "description": "Additional details that could be of interest. Provided to clearly enclose any attribute that is not part of the Beacon specification.\n",
@@ -20,9 +19,6 @@
     "beaconHandovers": {
       "description": "List of handovers that apply to the whole response, not to any resultset or result in particular.\n",
       "$ref": "../common/beaconCommonComponents.json#/definitions/ListOfHandovers"
-    },
-    "resultSets": {
-      "description": "Data responses wrapped for individual resultSets (e.g. dataset specific).",
-      "$ref": "./sections/beaconResultsets.json"
     }
+  }
 }

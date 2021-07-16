@@ -1,5 +1,5 @@
 {
-  "$schema": "../beaconCoreResponse.json",
+  "$schema": "../beaconCountResponse.json",
   "meta": {
     "beaconId":"org.example.beacon.v2",
     "apiVersion": "v2.0",
