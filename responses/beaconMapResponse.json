@@ -5,11 +5,11 @@
   "properties": {
     "meta": {
       "description": "Information about the response that could be relevant for the Beacon client in order to interpret the results.\n",
-      "$ref": "./sections/beaconInformationalResponseMeta.json"
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/sections/beaconInformationalResponseMeta.json"
     },
     "response": {
       "description": "Returning the Beacon Map.\n",
-      "$ref": "../configuration/beaconMapSchema.json"
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/configuration/beaconMapSchema.json"
     }
   },
   "required": ["meta", "response"],
