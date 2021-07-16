@@ -13,7 +13,7 @@
       "$ref": "./sections/beaconSummaryResponseSection.json"
 
     },
-    "extendedInfo": {
+    "info": {
       "description": "Additional details that could be of interest. Provided to clearly enclose any attribute that is not part of the Beacon specification.\n",
       "$ref": "../common/beaconCommonComponents.json#/definitions/Info"
     },
@@ -25,4 +25,5 @@
       "description": "Data responses wrapped for individual resultSets (e.g. dataset specific).",
       "$ref": "./sections/beaconResultsets.json"
     }
+  }
 }

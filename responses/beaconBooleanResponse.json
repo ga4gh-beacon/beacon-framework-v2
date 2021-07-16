@@ -12,7 +12,7 @@
       "description": "Boolean (true/false) response section.\n",
       "$ref": "./sections/beaconBooleanResponseSection.json"
     },
-    "extendedInfo": {
+    "info": {
       "description": "Additional details that could be of interest. Provided to clearly enclose any attribute that is not part of the Beacon specification.\n",
       "$ref": "../common/beaconCommonComponents.json#/definitions/Info"
     },
