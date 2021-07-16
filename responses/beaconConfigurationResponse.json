@@ -8,8 +8,8 @@
       "$ref": "./sections/beaconInformationalResponseMeta.json"
     },
     "response": {
-      "description": "Returning the Beacon Map.\n",
-      "$ref": "../configuration/beaconMapSchema.json"
+      "description": "Returning the Beacon configuration.\n",
+      "$ref": "../configuration/beaconConfigurationSchema.json"
     }
   },
   "required": ["meta", "response"],

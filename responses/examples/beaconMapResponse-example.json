@@ -8,7 +8,7 @@
     ]
   },
   "response": {
-    "$schema": "../beaconMapSchema.json",
+    "$schema": "../../configuration/beaconMapSchema.json",
     "endpointSets": {
       "dataset": {
         "entryType": "dataset",

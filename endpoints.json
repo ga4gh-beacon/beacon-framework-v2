@@ -20,7 +20,7 @@
       ],
       "get": {
         "description": "Get information about the beacon\n",
-        "operationId": "getBeaconInfoRoot",
+        "operationId": "getBeaconRoot",
         "tags": [
           "Informational endpoints"
         ],
