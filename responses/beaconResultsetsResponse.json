@@ -25,4 +25,5 @@
       "description": "Data responses wrapped for individual resultSets (e.g. dataset specific).",
       "$ref": "./sections/beaconResultsets.json"
     }
+  }
 }
