@@ -9,7 +9,7 @@
       "type": "string",
       "example": "datasetA\n"
     },
-    "type": {
+    "setType": {
       "description": "Entry type of resultSet. It SHOULD MATCH an entry type declared as collection in the Beacon configuration.\n",
       "type": "string",
       "default": "dataset"
