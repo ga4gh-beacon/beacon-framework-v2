@@ -1,0 +1,20 @@
+{
+  "$schema": "../beaconFilteringTermsResponse.json",  
+  "meta": {
+    "beaconId": "string",
+    "apiVersion": "string",
+    "returnedSchemas": [
+      { "map": "beacon-map-v2.0.0-draft.3" }
+    ]
+  },
+  "response": 
+    [
+      {
+        "type": "ontology",
+        "id": "DUO:0000006",
+        "label": "health or medical or biomedical research",
+        "version": "2021-02-23"
+      }
+    ],
+  "info": {}
+}
