@@ -2,7 +2,6 @@
   "$schema": "http://json-schema.org/draft-07/schema",
   "description": "Beacon response that includes details about the collections in this Beacon.\n",
   "type": "object",
-  "required": ["meta", "responseSummary"],
   "properties": {
     "meta": {
       "description": "Information about the response that could be relevant for the Beacon client in order to interpret the results.\n",
@@ -13,6 +12,13 @@
       "$ref": "./sections/beaconSummaryResponseSection.json"
 
     },
+    "collections": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "minItems": 1
+    },
     "info": {
       "description": "Additional details that could be of interest. Provided to clearly enclose any attribute that is not part of the Beacon specification.\n",
       "$ref": "../common/beaconCommonComponents.json#/definitions/Info"
@@ -20,10 +26,8 @@
     "beaconHandovers": {
       "description": "List of handovers that apply to the whole response, not to any resultset or result in particular.\n",
       "$ref": "../common/beaconCommonComponents.json#/definitions/ListOfHandovers"
-    },
-    "collections": {
-      "description": "Data responses wrapped for individual resultSets (e.g. dataset specific).",
-      "$ref": "./sections/beaconCollectionsResults.json"
     }
-  }
+  },
+  "required": ["meta", "responseSummary"],
+  "additionalProperties": true
 }
