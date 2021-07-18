@@ -1,28 +1,61 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "description": "Section of the response that includes the record level details grouped in Resultsets.\n",
+  "title": "Beacon ResultSet",
+  "description": "Sets of results to be returned as query response.\n",
   "type": "object",
   "properties": {
     "$schema": {
-      "type": "string",
-      "description": "Reference to the schema used to describe the attributes below.",
-      "$comments": "The '$schema' property is added to allow proper JSON schema+objects debugging in VSCode. It probably could be deleted for other tools or later in the process"
+      "$ref": "../../common/beaconCommonComponents.json#/definitions/$schema"
     },
     "resultSets": {
       "type": "array",
-      "items": { "$ref": "#/definitions/resultSetInstance" },
+      "items": {
+        "$ref": "#/definitions/ResultsetInstance"
+      },
       "minItems": 0
     }
   },
-  "definitions": {
-    "resultSetInstance": {
-      "type": "object",
-      "oneOf": [
-        { "$ref": "./beaconEmptyResultset.json" },
-        { "$ref": "./beaconNonEmptyResultset.json" }
-      ]
-    }
-  },
   "required": ["resultSets"],
-  "additionalProperties": true
+  "additionalProperties": true,
+
+  "definitions": {
+    "ResultsetInstance": {
+      "properties": {
+        "id": {
+          "description": "id of the resultset\n",
+          "type": "string",
+          "example": "datasetA\n"
+        },
+        "setType": {
+          "description": "Entry type of resultSet. It SHOULD MATCH an entry type declared as collection in the Beacon configuration.\n",
+          "type": "string",
+          "default": "dataset"
+        },
+        "exists": {
+          "type": "boolean"
+        },
+        "resultsCount": {
+          "description": "Number of results in this Resulset.\n",
+          "type": "integer"
+        },
+        "resultsHandovers": {
+          "description": "List of handovers that apply to this resultset, not to the whole Beacon or to a result in particular.\n",
+          "$ref": "../../common/beaconCommonComponents.json#/definitions/ListOfHandovers"
+        },
+        "info": {
+          "description": "Additional details that could be of interest about the Resultset. Provided to clearly enclose any attribute that is not part of the Beacon specification.\n",
+          "type": "object"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "minItems": 0
+        }
+      },
+      "required": ["id", "setType", "exists", "resultsCount", "results"],
+      "additionalProperties": true
+    }
+  }
 }
