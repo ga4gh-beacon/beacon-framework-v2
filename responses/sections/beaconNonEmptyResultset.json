@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema",
   "description": "Response to be returned when the query recovers any result for this Resultset.\n",
   "type": "object",
-  "required": ["id", "type", "exists", "resultsCount", "results"],
+  "required": ["id", "setType", "exists", "resultsCount", "results"],
   "properties": {
     "$schema": {
       "type": "string",
