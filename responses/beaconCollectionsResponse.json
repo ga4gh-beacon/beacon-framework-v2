@@ -10,14 +10,21 @@
     "responseSummary": {
       "description": "Response summary, including Boolean and optionally results count.\n",
       "$ref": "./sections/beaconSummaryResponseSection.json"
-
     },
-    "collections": {
-      "type": "array",
-      "items": {
-        "type": "object"
+    "response": {
+      "description": "Returning the Beacon Map.\n",
+      "type": "object",
+      "properties": {
+        "collections": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "minItems": 0
+        }
       },
-      "minItems": 1
+      "required": ["collections"],
+      "additionalProperties": true
     },
     "info": {
       "description": "Additional details that could be of interest. Provided to clearly enclose any attribute that is not part of the Beacon specification.\n",
@@ -28,6 +35,6 @@
       "$ref": "../common/beaconCommonComponents.json#/definitions/ListOfHandovers"
     }
   },
-  "required": ["meta", "responseSummary"],
+  "required": ["meta", "responseSummary", "response"],
   "additionalProperties": true
 }
