@@ -1,11 +1,28 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "description": "Filtering terms available in this Beacon.\n",
-  "type": "array",
+  "description": "Filtering terms and ontology resources utilised in this Beacon.\n",
+  "type": "object",
+  "properties": {
+    "resources":{
+      "type": "array",
+      "description": "Ontology resources defined externally to this beacon implementation"
+      "items": {
+        "$ref": "#/definitions/Resource"  
+      }
+    },
+    "filteringTerms": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FilteringTerm"
+      }
+    }
+  }
   "items": {
     "$ref": "#/definitions/FilteringTerm"
-  },
-  "minItems": 0,
+  }
+  
+  "description": "Filtering terms and ontology resources utilised in this Beacon.\n",
+,
 
   "definitions": {
     "FilteringTerm": {
@@ -29,8 +46,52 @@
           "example": "Aplasia/Hypoplasia of the middle ear"
         }
       }
+    },
+    "Resource": {
+      "type": "object",
+      "description": "implementation of phenopackets resource object to describe ontology resources, full documentation found https://phenopackets-schema.readthedocs.io/en/latest/resource.html",
+      "required": ["id"],
+      "properties":{
+        "id": {
+          "type": "string",
+          "description": "OBO ID representing the resource",
+          "example": "hp"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the ontology referred to by the id element",
+          "example": "Human Phenotype Ontology"
+        },
+        "url": {
+          "type": "string",
+          "description": "Uniform Resource Locator of the resource",
+          "example": "http://purl.obolibrary.org/obo/hp.owl"
+        },
+        "version": {
+          "type": "string",
+          "description": "The version of the resource or ontology used to make the annotation",
+          "example": "17-06-2019"
+        },
+        "nameSpacePrefix": {
+          "type": "string",
+          "description": "The prefix used in the CURIE of an OntologyClass",
+          "example": "HP"
+        },
+        "iriPrefix": {
+          "type": "string",
+          "description": "The full Internationalized Resource Identifier (IRI) prefix",
+          "example": "http://purl.obolibrary.org/obo/HP_"
+        }
+      }
     }
   },
+
+
+   OntologyResource:
+        iriPrefix:
+          description: The full Internationalized Resource Identifier (IRI) prefix
+          type: string
+          example: http://purl.obolibrary.org/obo/HP_
 
   "additionalProperties": true
 }
