@@ -37,6 +37,11 @@
           "enum": ["exact", "high", "medium", "low"],
           "default": "exact",
           "description": "Allow the Beacon to return results which do not match the filter exactly, but do match to a certain degree of similarity. The Beacon defines the semantic similarity model implemented and how to apply the thresholds of 'high', 'medium' and 'low' similarity.\n"
+        },
+        "scope": {
+          "type": "string",
+          "description": "The entry type to which the filter applies",
+          "example": "biosamples"
         }
       }
     },
@@ -61,6 +66,11 @@
           "type": "string",
           "description": "Alphanumeric search term to be used within the query which can contain wildcard characters (%) to denote any number of unknown characters.  Values can be assocatied with units if applicable.\n",
           "example": "P70Y"
+        },
+        "scope": {
+          "type": "string",
+          "description": "The entry type to which the filter applies",
+          "example": "biosamples"
         }
       }
     },
@@ -73,6 +83,11 @@
           "type": "string",
           "description": "Custom filter terms should contain a unique identifier.\n",
           "example": "demographic.ethnicity:asian"
+        },
+        "scope": {
+          "type": "string",
+          "description": "The entry type to which the filter applies",
+          "example": "biosamples"
         }
       }
     }
