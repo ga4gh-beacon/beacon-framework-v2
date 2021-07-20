@@ -17,13 +17,8 @@
       }
     }
   }
-  "items": {
-    "$ref": "#/definitions/FilteringTerm"
-  }
-  
-  "description": "Filtering terms and ontology resources utilised in this Beacon.\n",
-,
 
+  
   "definitions": {
     "FilteringTerm": {
       "type": "object",
