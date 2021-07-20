@@ -16,7 +16,7 @@
         "$ref": "#/definitions/FilteringTerm"
       }
     }
-  }
+  },
 
   
   "definitions": {
@@ -80,13 +80,5 @@
       }
     }
   },
-
-
-   OntologyResource:
-        iriPrefix:
-          description: The full Internationalized Resource Identifier (IRI) prefix
-          type: string
-          example: http://purl.obolibrary.org/obo/HP_
-
   "additionalProperties": true
 }
