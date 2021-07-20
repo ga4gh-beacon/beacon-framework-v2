@@ -5,7 +5,7 @@
   "properties": {
     "resources":{
       "type": "array",
-      "description": "Ontology resources defined externally to this beacon implementation"
+      "description": "Ontology resources defined externally to this beacon implementation",
       "items": {
         "$ref": "#/definitions/Resource"  
       }
