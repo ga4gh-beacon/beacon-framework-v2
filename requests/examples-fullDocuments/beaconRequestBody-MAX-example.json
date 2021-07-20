@@ -13,7 +13,10 @@
       }
     },
     "filters": [ 
-      {"id": "EFO:0001212"}
+      {
+        "id": "EFO:0001212",
+        "scope": "biosamples"
+      }
     ],
     "includeResultsetResponses": "HIT",
     "pagination": {
