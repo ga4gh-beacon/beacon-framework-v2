@@ -44,7 +44,7 @@
     },
     "Resource": {
       "type": "object",
-      "description": "implementation of phenopackets resource object to describe ontology resources, full documentation found https://phenopackets-schema.readthedocs.io/en/latest/resource.html",
+      "description": "implementation of phenopackets resource object to describe ontology resources, full documentation found https://phenopacket-schema.readthedocs.io/en/latest/resource.html",
       "required": ["id"],
       "properties":{
         "id": {
