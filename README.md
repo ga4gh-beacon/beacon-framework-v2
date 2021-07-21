@@ -11,7 +11,9 @@ The **Beacon Framework** (in *this* repo) is the part that describes the overall
 
 A **Beacon Model** (in the [Models repo](https://github.com/ga4gh-beacon/beacon-v2-Models)) describes the set of concepts included in a Beacon version (e.g. Beacon v2), like *individual* or *biosample*. It could also be referred in this document as simply the *Model*.
 
-The Framework could be considered the *syntax* and the Model as the *semantics*.
+The Framework could be considered the *syntax* and the Model as the *semantics*. 
+
+Refer to the [Models repo](https://github.com/ga4gh-beacon/beacon-v2-Models) for further information about the Model and how to use it.
 
 The Framework doesn't include anything related to specific entities but only the mechanisms for querying them and parsing the responses. 
 The BF is, therefore, independent from/agnostic to any specific Model. It can be leveraged to describe models from other domains like proteomics, imaging, biobanking, etc.
@@ -69,9 +71,9 @@ The Beacon concept includes several types of responses: some informative or info
 
 #### The Informational responses
 A Beacon is able to return information, details, about itself. Many of the schema responses included in the `responses` folder have a 1-to-1 relationship with the corresponding configuration documents and their equivalent root endpoints, e.g. the `beaconEntryTypeResponse.json` is the schema of a response that wraps the `beaconConfiguration.json` document, and is then used as the payload of the `/entry_types` root endpoint. Schematically:
-* *configuration/an_schema.json*:* describes the schema of the configuration file itself.
-* *responses/an_schema_response.json*: describes the format of the response that returns that configuration information.
-* *root/endpoints.json*: describes the API endpoints and parameters that should be called to retrieve such responses.
+* *configuration/an_schema.json*: describes the schema of the configuration file itself.
+* *responses/an_schema_response.json*: describes the format of the response that returns these configuration information.
+* *root/endpoints.json*: describes the API endpoints to be called and parameters to be used to retrieve such responses.
 
 The following schemas refer to informational responses: *beaconConfigurationResponse*, *beaconEntryTypeResponse*, *beaconFilteringTermsResponse*, ând *beaconMapResponse*.
  
