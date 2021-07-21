@@ -8,6 +8,7 @@ The GA4GH Beacon specification is composed by two parts:
 * the Beacon Model
 
 The **Beacon Framework** (in *this* repo) is the part that describes the overall structure of the API requests, responses, parameters, teh common components, etc. It could also be referred in this document as simply the *Framework*.
+
 A **Beacon Model** (in the [Models repo](https://github.com/ga4gh-beacon/beacon-v2-Models)) describes the set of concepts included in a Beacon version (e.g. Beacon v2), like *individual* or *biosample*. It could also be referred in this document as simply the *Model*.
 
 The Framework could be considered the *syntax* and the Model as the *semantics*.
@@ -38,12 +39,12 @@ The above listed elements are organized in several folders (*in alphabetical ord
 ### The *root* folder and the Beacon root endpoints
 The *root* folder only contains the endpoints.json document, an OpenAPI 3.0.2 description of the endpoints that every Beacon implementation MUST implement.
 The endpoints are:
-* the *root* ('/') and '/info' that MUST return information (metadata) about the Beacon service and the organization supporting it.
-* the '/service-info' endpoint that returns the Beacon metadata in the GA4GH Service Info schema.
-* the '/configuration' endpoint that returns some configuration aspects and the definition of the entry types (e.g. *genomic variants*, *biosamples*, *cohorts*) implemented in that specific Beacon server or instance.
-* the '/entry_types' endpoints that only return the section of the configuration that describes the entry types in that Beacon.
-* the '/map' endpoint that returns a map (like a web *sitemap*) of the different endpoints implemented in that Beacon instance.
-* the '/filtering_terms' endpoint that returns a list of the filtering terms accepted by that Beacon instance.
+* the *root* (`/`) and `/info` that MUST return information (metadata) about the Beacon service and the organization supporting it.
+* the `/service-info` endpoint that returns the Beacon metadata in the GA4GH Service Info schema.
+* the `/configuration` endpoint that returns some configuration aspects and the definition of the entry types (e.g. *genomic variants*, *biosamples*, *cohorts*) implemented in that specific Beacon server or instance.
+* the `/entry_types` endpoints that only return the section of the configuration that describes the entry types in that Beacon.
+* the `/map` endpoint that returns a map (like a web *sitemap*) of the different endpoints implemented in that Beacon instance.
+* the `/filtering_terms` endpoint that returns a list of the filtering terms accepted by that Beacon instance.
 
 Most of these endpoints simply return the configuration files that are in the Beacon configuration folder.
 
@@ -56,18 +57,18 @@ Contains the following Json schemas:
 * **beaconRequestMeta.json:** Meta section of the Beacon request. It includes request context details relevant for the Beacon server when processing the request, like the Beacon API version used to format the request or the schemas expected for the entry types in the response.
 * **filteringTerms.json:** defines the schema for the filters included in the request.
 * **requestParameters.json** defines the, very free, schema of the parameters included in the request.
-* **examples-fullDocuments folder:** includes examples of "actual" requests. The example labelled with 'MIN' in the name shows the minimal required attributes for the request to be compliant. The example labelled with 'MAX' in the name includes a richer case with all the sections filled in.
-* **examples-fullDocuments folder:** includes examples of "actual" sections of the requests. It is included to allow specification designers and Beacon implementers to check the compliance with a single section instead of having to implement a whole request. Such way, We aim to facilitate an "incremental" implementation of an instance.
+* **examples-fullDocuments folder:** includes examples of "actual" requests. The example labelled with `MIN` in the name shows the minimal required attributes for the request to be compliant. The example labelled with `MAX` in the name includes a richer case with all the sections filled in.
+* **examples-sections folder:** includes examples of "actual" sections of the requests. It is included to allow specification designers and Beacon implementers to check the compliance with a single section instead of having to implement a whole request. Such way, We aim to facilitate an "incremental" implementation of an instance.
 
 #### Differences between FilterTerms and RequestParameters
 The presence of two mechanism to refine the queries could sound confusing initially, but that separation is just taylored to facilitate the interpretation of the request.
-Both, the filters and the parameters, are used to refine the query. An unrestricted query like '''/datasets''' should return the list of all datasets in a Beacon instance.
+Both, the filters and the parameters, are used to refine the query. An unrestricted query like `/datasets` should return the list of all datasets in a Beacon instance.
 
 ### The Responses
 The Beacon concept includes several types of responses: some informative or informational and some with actual data payloads, and the error one. 
 
 #### The Informational responses
-A Beacon is able to return information, details, about itself. Many of the schema responses included in the 'responses' folder have a 1-to-1 relationship with the corresponding configuration documents and their equivalent root endpoints, e.g. the 'beaconEntryTypeResponse.json' is the schema of a response that wraps the 'beaconConfiguration.json' document, and is then used as the payload of the '/entry_types' root endpoint. Schematically:
+A Beacon is able to return information, details, about itself. Many of the schema responses included in the `responses` folder have a 1-to-1 relationship with the corresponding configuration documents and their equivalent root endpoints, e.g. the `beaconEntryTypeResponse.json` is the schema of a response that wraps the `beaconConfiguration.json` document, and is then used as the payload of the `/entry_types` root endpoint. Schematically:
 * *configuration/an_schema.json*:* describes the schema of the configuration file itself.
 * *responses/an_schema_response.json*: describes the format of the response that returns that configuration information.
 * *root/endpoints.json*: describes the API endpoints and parameters that should be called to retrieve such responses.
@@ -77,14 +78,14 @@ The following schemas refer to informational responses: *beaconConfigurationResp
 ### The results responses
 A Beacon could return responses at different granularity levels:
 
-* **boolean response:** only returns 'Yes/No' to a given query.
-* **count response:** returns 'Yes/No' and the number of matching results.
-* **resultset response:** returns 'Yes/No', the number of matching results and details of them per every collection (e.g. every dataset or cohort) and, if granted, details on every record that matches the query.
+* **boolean response:** only returns `exists: true` ('Yes') or `exists: false` ('No') to a given query.
+* **count response:** returns `Yes`/`No` and the number of matching results.
+* **resultset response:** returns `Yes`/`No`, the number of matching results and details of them per every collection (e.g. every dataset or cohort) and, if granted, details on every record that matches the query.
 
 Each of these granularity levels has an equivalent response schema: 
 * boolean > *beaconBooleanResponse*
 * count > *beaconCountResponse*
-* resultset > *beaconResultSetsResponse*
+* resultset (with or w/o record details) > *beaconResultSetsResponse*
 
 An additional schema, *beaconCollectionsResponse*, describes such responses that returns details about the collections in a Beacon, but not the collection content themselves. Otherwise said, the response describes a dataset, but not returns the contents of any dataset.
 
