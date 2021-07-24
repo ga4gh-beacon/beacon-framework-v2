@@ -120,6 +120,7 @@ Except when testing, most of the Beacon queries are expected to be answered by '
   `record`|returns details for every row. 
   For those cases where a Beacon prefers to return records with less, not all, attributes, different strategies have been considered, e.g.: keep non-mandatory attributes empty, or Beacon to provide a minimal record definition, but these strategies still need to be tested in real world cases and hence no design decision has been taken yet.
   * **securityLevels:** All access levels supported by the Beacon. Any combination is valid, as every option would apply to different parts of the Beacon. Available options are:
+  
   security level | description
   ---------------|------------
   PUBLIC|Any anonymous user can read the data
@@ -127,7 +128,8 @@ Except when testing, most of the Beacon queries are expected to be answered by '
   CONTROLLED|Only specificly granted users can read the data
   
   #### Example:
-  '''
+  
+  ```
   "maturityAttributes": {
     "productionStatus": "DEV"
   },
@@ -135,6 +137,6 @@ Except when testing, most of the Beacon queries are expected to be answered by '
     "defaultGranularity": "boolean",
     "securityLevels": ["PUBLIC", "REGISTERED", "CONTROLLED"]
   }
-  '''
+  ```
   The Beacon in the example is in development status, returns boolean answers by default, and has queries available in any of the access levels.
 
