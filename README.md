@@ -29,17 +29,17 @@ The Framework repo includes the elements that are common to all Beacons:
 3. The files of every Beacon root
 4. Examples of all the above (using a fake and simple Model)
 
-## Folder structure of this repo
+## Folder structure in this repo
 The above listed elements are organized in several folders (*in alphabetical order*):
 
 * **common:** Json schemas and examples of the components used in other parts of the specification.
 * **configuration:** Json schemas and examples for the configuration files that every Beacon MUST implement.
 * **requests:** Json schemas and examples for the different sections of a request.
 * **responses:** Json schemas and examples for the different types of responses and response sections.
-* ***root* folder:** Only includes the definition of the Beacon root endpoints.
+* ***root* folder:** It only includes the definition of the Beacon root endpoints.
 
 ### The *root* folder and the Beacon root endpoints
-The *root* folder only contains the endpoints.json document, an OpenAPI 3.0.2 description of the endpoints that every Beacon implementation MUST implement.
+The *root* folder only contains the endpoints.json document, an OpenAPI 3.0.2 description of the endpoints that every Beacon instance MUST implement.
 The endpoints are:
 * the *root* (`/`) and `/info` that MUST return information (metadata) about the Beacon service and the organization supporting it.
 * the `/service-info` endpoint that returns the Beacon metadata in the GA4GH Service Info schema.
@@ -48,10 +48,10 @@ The endpoints are:
 * the `/map` endpoint that returns a map (like a web *sitemap*) of the different endpoints implemented in that Beacon instance.
 * the `/filtering_terms` endpoint that returns a list of the filtering terms accepted by that Beacon instance.
 
-Most of these endpoints simply return the configuration files that are in the Beacon configuration folder.
+Most of these endpoints simply return the configuration files that are in the Beacon configuration folder. Of course, every Beacon instance would have their particular instance of such documents, including the configuration of such instance.
 
 ### The Configuration 
-Contains the files that describe the Beacon configuration, its contents are described in the section above, as they have almost a 1-to-1 relationship with such endpoints.
+Contains the Json schema files that describe the Beacon configuration, its contents are described in the section above, as they have almost a 1-to-1 relationship with such endpoints. Further details about the specific content of each file could be find in the corresponding sections below.
 
 ### The Requests 
 Contains the following Json schemas:
@@ -62,9 +62,15 @@ Contains the following Json schemas:
 * **examples-fullDocuments folder:** includes examples of "actual" requests. The example labelled with `MIN` in the name shows the minimal required attributes for the request to be compliant. The example labelled with `MAX` in the name includes a richer case with all the sections filled in.
 * **examples-sections folder:** includes examples of "actual" sections of the requests. It is included to allow specification designers and Beacon implementers to check the compliance with a single section instead of having to implement a whole request. Such way, We aim to facilitate an "incremental" implementation of an instance.
 
-#### Differences between FilterTerms and RequestParameters
-The presence of two mechanism to refine the queries could sound confusing initially, but that separation is just taylored to facilitate the interpretation of the request.
-Both, the filters and the parameters, are used to refine the query. An unrestricted query like `/datasets` should return the list of all datasets in a Beacon instance.
+#### Differences between FilteringTerms and RequestParameters
+Both, the filters (*filteringTerms*) and the parameters (*requestParameters*), are used to refine the query. The availability of two mechanisms to refine the queries could sound initially confusing, but that separation is  taylored to facilitate the interpretation of the request by the Beacon server.
+
+An basic difference is that, in HTTP GET requests, each parameters is named (e.g. 'id', 'skip','limit') while filters go under the same named parameter 'filters'. For HTTP POST requests, the difference relays on paramaters having each one a separate definition (e.g. `id` is a `string`, while `skip` is an `integer`), while all filters follow the schema described in `/requests/filteringTerms.json'.
+
+An unrestricted query like `/datasets` should return the list of all datasets in a Beacon instance. That query could be refined by adding a generic condition like: "return only datasets which could be used for 'general research'" or "return only the first 10 datasets". The former belong to the filter category, the latter to the parameters. If you are a beacon implementer, a rule of thumb could be:
+* anything that requires its own schema would be a request parameter 
+* anything that could be represented by an ontology term would go into the filters section.
+* anything else would probably be a request parameter.
 
 ### The Responses
 The Beacon concept includes several types of responses: some informative or informational and some with actual data payloads, and the error one. 
@@ -93,3 +99,42 @@ An additional schema, *beaconCollectionsResponse*, describes such responses that
 
 ### The common components
 Some elements are transerval to the Framework and to any model, e.g. the schema for describing an ontology term or the reference to an external schema (like the reference to GA4GH Phenopackets or GA4GH Service Info schemas). 
+
+## The Beacon Configuration file
+The file `/configuration/beaconConfiguration.json` defines the schema (in Json schema draft-07) of the Json file that includes core aspects of a Beacon instance configuration.
+The schema includes four sections:
+1. **$schema:** that MUST BE a reference to a schema. In the Models, the instances of that file will point to *this file*. Having the schema allows verifying that the document is compliant with it.
+2. **maturityAttributes:** Declares the level of maturity of the Beacon instance. Available values are:
+  * **DEV:** Service potentially unstable, not using real data, which availability and data should not be used in production setups.
+  * **TEST:** The service is expected to be stable, meaning up and available, but does not include real data to be trusted for real world queries.
+  * **PROD:** Service stable, at production level standards, containing actual data.
+Except when testing, most of the Beacon queries are expected to be answered by 'PROD' Beacons.
+
+3. **securityAttributes:** Configuration of the security aspects of the Beacon. By default, a Beacon that does not declare the configuration settings would return `boolean` (true/false) responses, and only if the user is authenticated and explicitly authorized to access the Beacon resources. Although this is the safest set of settings, it is not recommended unless the Beacon shares very sensitive information. Non sensitive Beacons should preferably opt for a `record` and `PUBLIC` combination.
+  * **defaultGranularity:** Default granularity of the responses. Some responses could return higher detail, but this would be the granularity by default.
+  Granularity|Description
+  -----------|-----------
+  `boolean`|returns 'true/false' responses.
+  `count`|adds the total number of positive results found.
+  `aggregated`|returns summary, aggregated or distribution like responses per collection. 
+  `record`|returns details for every row. 
+  For those cases where a Beacon prefers to return records with less, not all, attributes, different strategies have been considered, e.g.: keep non-mandatory attributes empty, or Beacon to provide a minimal record definition, but these strategies still need to be tested in real world cases and hence no design decision has been taken yet.
+  * **securityLevels:** All access levels supported by the Beacon. Any combination is valid, as every option would apply to different parts of the Beacon. Available options are:
+  security level | description
+  ---------------|------------
+  PUBLIC|Any anonymous user can read the data
+  REGISTERED|Only known users can read the data
+  CONTROLLED|Only specificly granted users can read the data
+  
+  #### Example:
+  '''
+  "maturityAttributes": {
+    "productionStatus": "DEV"
+  },
+  "securityAttributes": {
+    "defaultGranularity": "boolean",
+    "securityLevels": ["PUBLIC", "REGISTERED", "CONTROLLED"]
+  }
+  '''
+  The Beacon in the example is in development status, returns boolean answers by default, and has queries available in any of the access levels.
+
