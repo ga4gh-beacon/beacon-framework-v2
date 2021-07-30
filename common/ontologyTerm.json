@@ -5,6 +5,15 @@
   "type": "object",
   "properties": {
     "id": {
+        "$ref": "#/definitions/CURIE"
+    },
+    "label": {
+      "type": "string",
+      "description": "The text that describes the term. By default it could be the preferred text of the term, but is it acceptable to customize it for a clearer description and understanding of the term in an specific context."
+    }
+  },
+  "definitions": {
+    "CURIE": {
       "pattern": "^\\w[^:]+:.+$",
       "type": "string",
       "description": "A CURIE identifier for an ontology term.",
@@ -14,10 +23,6 @@
         "orcid:0000-0003-3463-0775",
         "PMID:15254584"
       ]
-    },
-    "label": {
-      "type": "string",
-      "description": "The text that describes the term. By default it could be the preferred text of the term, but is it acceptable to customize it for a clearer description and understanding of the term in an specific context."
     }
   },
   "required": ["id"],
