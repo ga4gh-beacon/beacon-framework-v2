@@ -1,0 +1,22 @@
+{
+  "$schema": "../filteringTermsSchema.json",
+  "filteringTerms": [
+    { 
+      "ftType": "alfanumeric",
+      "id": "age",
+      "scope": "individual"
+    },
+    {
+      "ftType": "ontologyTerm",
+      "id": "HP:0002664",
+      "label": "Neoplasm",
+      "scope": "biosample"
+    },
+    {
+      "ftType": "alfanumeric",
+      "id": "NCIT:C100094",
+      "label": "HGNC gene name",
+      "scope": "genomicVariant"
+    }
+  ]
+}
