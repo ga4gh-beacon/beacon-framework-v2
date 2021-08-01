@@ -4,12 +4,12 @@ Beacon Framework version 2
 ## Introduction
 The GA4GH Beacon specification is composed by two parts:
 
-* the Beacon Framework
-* the Beacon Model
+* the Beacon Framework (in *this* repo) 
+* the Beacon Model (in the [Models repo](https://github.com/ga4gh-beacon/beacon-v2-Models))
 
-The **Beacon Framework** (in *this* repo) is the part that describes the overall structure of the API requests, responses, parameters, teh common components, etc. It could also be referred in this document as simply the *Framework*.
+The **Beacon Framework** is the part that describes the overall structure of the API requests, responses, parameters, teh common components, etc. It could also be referred in this document as simply the *Framework*.
 
-A **Beacon Model** (in the [Models repo](https://github.com/ga4gh-beacon/beacon-v2-Models)) describes the set of concepts included in a Beacon version (e.g. Beacon v2), like *individual* or *biosample*. It could also be referred in this document as simply the *Model*.
+A **Beacon Model** describes the set of concepts included in a Beacon version (e.g. Beacon v2), like *individual* or *biosample*. It could also be referred in this document as simply the *Model*.
 
 The Framework could be considered the *syntax* and the Model as the *semantics*. 
 
@@ -20,7 +20,7 @@ The BF is, therefore, independent from/agnostic to any specific Model. It can be
 
 A **Beacon instance** is just an implementation of a Beacon Model that follows the rules stated by the Beacon Framework.
 
-If you are a Beacon implementer, then, you don't need to clone this (Framework) repo, you only need to **copy** (*or clone*) the Beacon Model and modify it to your specific case. You will find plenty of references to the Framework in the Model copy, and you will use the Json schemas here to validate that both the structure of your requests and responses are compliant with the Beacon Framework.
+If you are a Beacon implementer, then, you don't need to clone this (Framework) repo, you only need to **copy** (*or clone*) the Beacon Model and modify it to your specific instance. You will find plenty of references to the Framework in the Model copy, and you will use the Json schemas in the Framework to validate that both the structure of your requests and responses are compliant with the Beacon Framework. The [Beacon verifier](https://github.com/ga4gh-beacon/beacon-verifier) tool would help in such validation.
 
 The Framework repo includes the elements that are common to all Beacons:
 
@@ -49,6 +49,8 @@ The endpoints are:
 * the `/filtering_terms` endpoint that returns a list of the filtering terms accepted by that Beacon instance.
 
 Most of these endpoints simply return the configuration files that are in the Beacon configuration folder. Of course, every Beacon instance would have their particular instance of such documents, including the configuration of such instance.
+
+*Note:* It could be argued that the Beacon configuration files are different for every Beacon instance and, hence, they should be part of the Model. However, the configuration files MUST be used, exactly with the same schema, by *any* model, independently if that Beacon follows the Beacon v2 Model or any other. Additionally, these endpoints and configuration files are *critical* for a Beacon client to be able to understand and use a Beacon instance. Therefore, we have considered it to be an essential part of the Framework and belonging to it.
 
 ### The Configuration 
 Contains the Json schema files that describe the Beacon configuration, its contents are described in the section above, as they have almost a 1-to-1 relationship with such endpoints. Further details about the specific content of each file could be find in the corresponding sections below.
@@ -112,12 +114,14 @@ Except when testing, most of the Beacon queries are expected to be answered by '
 
 3. **securityAttributes:** Configuration of the security aspects of the Beacon. By default, a Beacon that does not declare the configuration settings would return `boolean` (true/false) responses, and only if the user is authenticated and explicitly authorized to access the Beacon resources. Although this is the safest set of settings, it is not recommended unless the Beacon shares very sensitive information. Non sensitive Beacons should preferably opt for a `record` and `PUBLIC` combination.
   * **defaultGranularity:** Default granularity of the responses. Some responses could return higher detail, but this would be the granularity by default.
+
   Granularity|Description
   -----------|-----------
   `boolean`|returns 'true/false' responses.
   `count`|adds the total number of positive results found.
   `aggregated`|returns summary, aggregated or distribution like responses per collection. 
   `record`|returns details for every row. 
+
   For those cases where a Beacon prefers to return records with less, not all, attributes, different strategies have been considered, e.g.: keep non-mandatory attributes empty, or Beacon to provide a minimal record definition, but these strategies still need to be tested in real world cases and hence no design decision has been taken yet.
   * **securityLevels:** All access levels supported by the Beacon. Any combination is valid, as every option would apply to different parts of the Beacon. Available options are:
   
