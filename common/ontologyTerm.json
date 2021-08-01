@@ -5,7 +5,8 @@
   "type": "object",
   "properties": {
     "id": {
-        "$ref": "#/definitions/CURIE"
+      "$comment": "Use the definition in the Framework when the PR is approved.",
+      "$ref": "#/definitions/CURIE"
     },
     "label": {
       "type": "string",
