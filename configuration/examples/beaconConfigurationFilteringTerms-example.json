@@ -2,7 +2,7 @@
   "$schema": "../filteringTermsSchema.json",
   "filteringTerms": [
     { 
-      "ftType": "alfanumeric",
+      "ftType": "alphanumeric",
       "id": "age",
       "scope": "individual"
     },
@@ -13,7 +13,7 @@
       "scope": "biosample"
     },
     {
-      "ftType": "alfanumeric",
+      "ftType": "alphanumeric",
       "id": "NCIT:C100094",
       "label": "HGNC gene name",
       "scope": "genomicVariant"
