@@ -16,6 +16,8 @@
       { "$ref": "../beaconCommonComponents.json#/definitions/SchemasPerEntity" },
     "pagination": 
       { "$ref": "../beaconCommonComponents.json#/definitions/Pagination" },
+    "includeResultsetResponses": 
+      { "$ref": "../beaconCommonComponents.json#/definitions/IncludeResultsetResponses"},
     "filters": 
       { "$ref": "../beaconCommonComponents.json#/definitions/Filters" },
     "exists": 

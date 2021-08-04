@@ -23,21 +23,13 @@
           "$ref": "./filteringTerms.json"
         },
         "includeResultsetResponses": {
-          "$ref": "#/definitions/IncludeResultsetResponses"
+          "$ref": "../common/beaconCommonComponents.json#/definitions/IncludeResultsetResponses"
         },
         "pagination": {
           "description": "Pagination to apply on the results.\n",
           "$ref": "../common/beaconCommonComponents.json#/definitions/Pagination"
         }
       }
-    }
-  },
-  "definitions": {
-    "IncludeResultsetResponses": {
-      "description": "Indicator of whether responses from every Resultset should be included in the response (`BeaconAlleleResponse`) to this request or not. If null (not specified), the default value of 'HIT' is assumed. This parameter allows for returning boolean/counting results although the Beacon instance is able to return record level details.",
-      "type": "string",
-      "enum": ["ALL", "HIT", "MISS", "NONE"],
-      "default": "HIT"
     }
   },
   "required": ["meta"]

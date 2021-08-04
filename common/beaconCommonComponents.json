@@ -90,6 +90,13 @@
       "default": 10,
       "example": 10
     },
+    "IncludeResultsetResponses": {
+      "description": "Indicator of whether responses from every Resultset should be included in the response to this request or just the ones with positive, negative results or no details at all. If null (not specified), the default value of 'HIT' is assumed. This parameter allows for returning boolean/counting results although the Beacon instance is capable to return record level details.",
+      "type": "string",
+      "enum": ["ALL", "HIT", "MISS", "NONE"],
+      "default": "HIT",
+      "examples": ["ALL", "HIT", "MISS", "NONE"]
+    },
     "Filters": {
       "description": "Ontology based filters. CURIE syntax is encouraged to be used.\n",
       "type": "array",

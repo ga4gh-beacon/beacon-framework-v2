@@ -18,7 +18,7 @@
       "$ref": "../../common/beaconCommonComponents.json#/definitions/Filters"
     },
     "includeResultsetResponses": {
-      "$ref": "../../requests/beaconRequestBody.json#/definitions/IncludeResultsetResponses"
+      "$ref": "../../common/beaconCommonComponents.json#/definitions/IncludeResultsetResponses"
     },
     "pagination": {
       "description": "Pagination to apply on the results.\n",
