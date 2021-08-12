@@ -1,10 +1,10 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "description": "Information about the response that could be relevant for the Beacon client in order to interpret the results.\n",
+  "description": "Information about the response that could be relevant for the Beacon client in order to interpret the results.",
   "type": "object",
   "properties": {
     "beaconId": {
-      "description": "Identifier of the beacon, as defined in `Beacon`.\n",
+      "description": "Identifier of the beacon, as defined in `Beacon`.",
       "$ref": "../../common/beaconCommonComponents.json#/definitions/BeaconId"
     },
     "apiVersion": {

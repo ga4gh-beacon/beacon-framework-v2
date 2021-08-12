@@ -1,11 +1,11 @@
 {
   "$schema": "../requestParameters.json",
   "exampleEntry": {
-    "description": "All the required fields to query any kind of variant (e.g. SNP, DUP,\netc.).\n",
+    "description": "All the required fields to query any kind of variant (e.g. SNP, DUP,\netc.).",
     "type": "object",
     "properties": {
       "id": {
-        "description": "Id of the entry to display.\n",
+        "description": "Id of the entry to display.",
         "type": "string"
       }
     }

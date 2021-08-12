@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "description": "Schema for the Beacon request. It is named `RequestBody` to keep the same nomenclature used by OpenAPI v3, but it actually contains the definition of the whole HTTP POST request payload.\n",
+  "description": "Schema for the Beacon request. It is named `RequestBody` to keep the same nomenclature used by OpenAPI v3, but it actually contains the definition of the whole HTTP POST request payload.",
   "type": "object",
   "properties": {
     "$schema": {
@@ -15,18 +15,18 @@
       "type": "object",
       "properties": {
         "requestParameters": {
-          "description": "TBD.\n",
+          "description": "TBD",
           "$ref": "./requestParameters.json"
         },
         "filters": {
-          "description": "Ontology based filters. Using CURIE syntax is encouraged.\n",
+          "description": "Ontology based filters. Using CURIE syntax is encouraged.",
           "$ref": "./filteringTerms.json"
         },
         "includeResultsetResponses": {
           "$ref": "../common/beaconCommonComponents.json#/definitions/IncludeResultsetResponses"
         },
         "pagination": {
-          "description": "Pagination to apply on the results.\n",
+          "description": "Pagination to apply on the results.",
           "$ref": "../common/beaconCommonComponents.json#/definitions/Pagination"
         }
       }
