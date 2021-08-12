@@ -14,14 +14,14 @@
       "$comment": "TO DO: Add the format attribute as a uri.\n2. minItems:0 is used to confirm that an empty array is acceptable here."
     },
     "filters": {
-      "description": "Ontology based filters. CURIE syntax is encouraged to be used.\n",
+      "description": "Ontology based filters. CURIE syntax is encouraged to be used.",
       "$ref": "../../common/beaconCommonComponents.json#/definitions/Filters"
     },
     "includeResultsetResponses": {
       "$ref": "../../common/beaconCommonComponents.json#/definitions/IncludeResultsetResponses"
     },
     "pagination": {
-      "description": "Pagination to apply on the results.\n",
+      "description": "Pagination to apply on the results.",
       "$ref": "../../common/beaconCommonComponents.json#/definitions/Pagination"
     }
   },

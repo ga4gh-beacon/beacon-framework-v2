@@ -1,17 +1,17 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "description": "Metadata describing a Beacon instance.\n",
+  "description": "Metadata describing a Beacon instance.",
   "type": "object",
   "required": ["id", "name", "apiVersion", "environment", "organization"],
   "properties": {
     "id": {
       "type": "string",
-      "description": "Unique identifier of the Beacon. Use reverse domain name notation.\n",
+      "description": "Unique identifier of the Beacon. Use reverse domain name notation.",
       "example": "org.ga4gh.Beacon"
     },
     "name": {
       "type": "string",
-      "description": "Name of the Beacon.\n"
+      "description": "Name of the Beacon."
     },
     "apiVersion": {
       "type": "string",
@@ -20,7 +20,7 @@
     },
     "environment": {
       "type": "string",
-      "description": "Environment the service is running in. Use this to distinguish\nbetween production, development and testing/staging deployments.\n",
+      "description": "Environment the service is running in. Use this to distinguish\nbetween production, development and testing/staging deployments.",
       "enum": ["prod", "test", "dev", "staging"],
       "example": "dev"
     },
@@ -29,16 +29,16 @@
     },
     "description": {
       "type": "string",
-      "description": "Description of the Beacon.\n"
+      "description": "Description of the Beacon."
     },
     "version": {
       "type": "string",
-      "description": "Version of the Beacon.\n",
+      "description": "Version of the Beacon.",
       "example": "v0.1"
     },
     "welcomeUrl": {
       "type": "string",
-      "description": "URL to the welcome page for this Beacon (RFC 3986 format).\n",
+      "description": "URL to the welcome page for this Beacon (RFC 3986 format).",
       "example": "http://example.org/wiki/Main_Page"
     },
     "alternativeUrl": {
@@ -48,16 +48,16 @@
     },
     "createDateTime": {
       "type": "string",
-      "description": "The time the Beacon was created (ISO 8601 format).\n",
+      "description": "The time the Beacon was created (ISO 8601 format).",
       "example": "2012-07-19 or 2017-01-17T20:33:40Z"
     },
     "updateDateTime": {
       "type": "string",
-      "description": "The time the Beacon was updated in (ISO 8601 format).\n",
+      "description": "The time the Beacon was updated in (ISO 8601 format).",
       "example": "2012-07-19 or 2017-01-17T20:33:40Z"
     },
     "info": {
-      "description": "Additional unspecified metadata about the Beacon service.\n",
+      "description": "Additional unspecified metadata about the Beacon service.",
       "type": "object",
       "example": {
         "additionalInfoKey1": "additionalInfoValue1",
@@ -68,29 +68,29 @@
 
   "definitions": {
     "BeaconOrganization": {
-      "description": "Organization owning the Beacon.\n",
+      "description": "Organization owning the Beacon.",
       "type": "object",
       "required": ["id", "name"],
       "properties": {
         "id": {
           "type": "string",
-          "description": "Unique identifier of the organization.\n"
+          "description": "Unique identifier of the organization."
         },
         "name": {
           "type": "string",
-          "description": "Name of the organization.\n"
+          "description": "Name of the organization."
         },
         "description": {
           "type": "string",
-          "description": "Description of the organization.\n"
+          "description": "Description of the organization."
         },
         "address": {
           "type": "string",
-          "description": "Address of the organization.\n"
+          "description": "Address of the organization."
         },
         "welcomeUrl": {
           "type": "string",
-          "description": "URL of the website of the organization (RFC 3986 format).\n"
+          "description": "URL of the website of the organization (RFC 3986 format)."
         },
         "contactUrl": {
           "type": "string",
@@ -101,7 +101,7 @@
           "description": "URL to the logo (PNG/JPG/SVG format) of the organization (RFC 3986 format)."
         },
         "info": {
-          "description": "Additional unspecified metadata about the host Organization.\n",
+          "description": "Additional unspecified metadata about the host Organization.",
           "type": "object",
           "example": {
             "additionalInfoKey": "additionalInfoValue"

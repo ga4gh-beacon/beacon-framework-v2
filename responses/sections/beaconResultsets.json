@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "Beacon ResultSet",
-  "description": "Sets of results to be returned as query response.\n",
+  "description": "Sets of results to be returned as query response.",
   "type": "object",
   "properties": {
     "$schema": {
@@ -22,12 +22,12 @@
     "ResultsetInstance": {
       "properties": {
         "id": {
-          "description": "id of the resultset\n",
+          "description": "id of the resultset",
           "type": "string",
-          "example": "datasetA\n"
+          "example": "datasetA"
         },
         "setType": {
-          "description": "Entry type of resultSet. It SHOULD MATCH an entry type declared as collection in the Beacon configuration.\n",
+          "description": "Entry type of resultSet. It SHOULD MATCH an entry type declared as collection in the Beacon configuration.",
           "type": "string",
           "default": "dataset"
         },
@@ -35,15 +35,15 @@
           "type": "boolean"
         },
         "resultsCount": {
-          "description": "Number of results in this Resulset.\n",
+          "description": "Number of results in this Resulset.",
           "type": "integer"
         },
         "resultsHandovers": {
-          "description": "List of handovers that apply to this resultset, not to the whole Beacon or to a result in particular.\n",
+          "description": "List of handovers that apply to this resultset, not to the whole Beacon or to a result in particular.",
           "$ref": "../../common/beaconCommonComponents.json#/definitions/ListOfHandovers"
         },
         "info": {
-          "description": "Additional details that could be of interest about the Resultset. Provided to clearly enclose any attribute that is not part of the Beacon specification.\n",
+          "description": "Additional details that could be of interest about the Resultset. Provided to clearly enclose any attribute that is not part of the Beacon specification.",
           "type": "object"
         },
         "results": {

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "description": "Beacon results summary section.\n",
+  "description": "Beacon results summary section.",
   "type": "object",
   "properties": {
     "exists": {
@@ -8,7 +8,7 @@
       "$ref": "../../common/beaconCommonComponents.json#/definitions/Exists"
     },
     "numTotalResults": {
-      "description": "Total number of results.\n",
+      "description": "Total number of results.",
       "$ref": "../../common/beaconCommonComponents.json#/definitions/NumTotalResults"
     }
   },

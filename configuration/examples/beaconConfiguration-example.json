@@ -37,7 +37,7 @@
         "label": "Conceptual Entity"
       },
       "partOfSpecification": "Beacon v2.0-draft3",
-      "description": "A generic entry type to allow testing and playing with the specification.\n",
+      "description": "A generic entry type to allow testing and playing with the specification.",
       "defaultSchema": {
         "id": "ExampleEntryTypeDefaultschema",
         "name": "Default schema for an example entries",
