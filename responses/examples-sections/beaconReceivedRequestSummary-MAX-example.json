@@ -7,14 +7,13 @@
       "schema": "ga4gh-phenopacket-individual-v0.1"
     }
   ],
-  "requestParameters": [
-    {
-      "entity": "individual",
+  "requestParameters": {
+    "individual": {
       "parameters": [
-        {"id":"123"},{"position":"1234556"}
+        {"id":"123"},{"gender":"female"}
       ]
     }
-  ],
+  },
   "IncludeResultsetResponses": "HIT",
   "filters": [
     "BTO:0000199",
