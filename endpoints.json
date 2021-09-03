@@ -19,7 +19,7 @@
         { "$ref":"#/components/parameters/requestedSchema" }
       ],
       "get": {
-        "description": "Get information about the beacon\n",
+        "description": "Get information about the beacon",
         "operationId": "getBeaconRoot",
         "tags": [
           "Informational endpoints"
@@ -29,7 +29,7 @@
             "$ref": "#/components/responses/infoOKResponse"
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation.",
             "$ref": "../beacon-framework-v2/responses/beaconErrorResponse.json"
           }
         }
@@ -40,7 +40,7 @@
         { "$ref":"#/components/parameters/requestedSchema" }
       ],
       "get": {
-        "description": "Get information about the beacon\n",
+        "description": "Get information about the beacon",
         "operationId": "getBeaconInfoRoot",
         "tags": [
           "Informational endpoints"
@@ -50,7 +50,7 @@
             "$ref": "#/components/responses/infoOKResponse"
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation.",
             "$ref": "../beacon-framework-v2/responses/beaconErrorResponse.json"
           }
         }
@@ -58,14 +58,14 @@
     },
     "/service-info": {
       "get": {
-        "description": "Get information about the beacon using GA4GH ServiceInfo format\n",
+        "description": "Get information about the beacon using GA4GH ServiceInfo format",
         "operationId": "getBeaconServiceInfo",
         "tags": [
           "Informational endpoints"
         ],
         "responses": {
           "200": {
-            "description": "Successful operation\n",
+            "description": "Successful operation",
             "content": {
               "application/json": {
                 "schema": {
@@ -79,27 +79,27 @@
     },
     "/configuration": {
       "get": {
-        "description": "TBD.",
+        "description": "TBD",
         "operationId": "getBeaconConfiguration",        
         "tags": [
           "Configuration"
         ],
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation.",
             "content": {
               "application/json": {
                 "schema":{
-                  "description": "Response of a request for information about a Beacon.\n",
+                  "description": "Response of a request for information about a Beacon.",
                   "type": "object",
                   "required": ["meta","response"],
                   "properties": {
                     "meta": {
-                      "description": "TBD.\n",
+                      "description": "TBD",
                       "$ref":"../beacon-framework-v2/responses/sections/beaconInformationalResponseMeta.json"
                     },
                     "response": {
-                      "description": "TBD.\n",
+                      "description": "TBD",
                       "$ref":"../beacon-framework-v2/configuration/beaconConfigurationSchema.json"
                     }
                   }
@@ -108,7 +108,7 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation.",
             "$ref": "../beacon-framework-v2/responses/beaconErrorResponse.json"
           }
         }
@@ -116,7 +116,7 @@
     },
     "/map": {
       "get": {
-        "description":"TBD.",
+        "description":"TBD",
         "operationId":"getBeaconMap",
         "tags": [
           "Configuration"
@@ -124,20 +124,20 @@
         "parameters": [],
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation.",
             "content": {
               "application/json": {
                 "schema":{
-                  "description": "Response of a request for the Beacon Map of endpoints.\n",
+                  "description": "Response of a request for the Beacon Map of endpoints.",
                   "type": "object",
                   "required": ["meta","response"],
                   "properties": {
                     "meta": {
-                      "description": "TBD.\n",
+                      "description": "TBD",
                       "$ref":"../beacon-framework-v2/responses/sections/beaconInformationalResponseMeta.json"
                     },
                     "response": {
-                      "description": "TBD.\n",
+                      "description": "TBD",
                       "$ref":"../beacon-framework-v2/configuration/beaconMapSchema.json"
                     }
                   }
@@ -146,7 +146,7 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation.",
             "$ref": "../beacon-framework-v2/responses/beaconErrorResponse.json"
           }
         }
@@ -154,7 +154,7 @@
     },
     "/entry_types": {
       "get": {
-        "description":"TBD.",
+        "description":"TBD",
         "operationId":"getEntryTypes",
         "tags": [
           "Configuration"
@@ -162,20 +162,20 @@
         "parameters": [],
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation.",
             "content": {
               "application/json": {
                 "schema":{
-                  "description": "Response of a request for information about a Beacon.\n",
+                  "description": "Response of a request for information about a Beacon.",
                   "type": "object",
                   "required": ["meta","response"],
                   "properties": {
                     "meta": {
-                      "description": "TBD.\n",
+                      "description": "TBD",
                       "$ref":"../beacon-framework-v2/responses/sections/beaconInformationalResponseMeta.json"
                     },
                     "response": {
-                      "description": "TBD.\n",
+                      "description": "TBD",
                       "$ref":"../beacon-framework-v2/configuration/beaconConfigurationSchema.json#/definitions/EntryTypes"
                     }
                   }
@@ -184,7 +184,7 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation.",
             "$ref": "../beacon-framework-v2/responses/beaconErrorResponse.json"
           }
         }
@@ -196,7 +196,7 @@
         { "$ref":"#/components/parameters/limit" }
       ],
       "get": {
-        "description": "Get the list of filtering terms handled by this beacon\n",
+        "description": "Get the list of filtering terms handled by this beacon",
         "operationId": "getFilteringTerms",
         "tags": [
           "Informational endpoints"
@@ -206,7 +206,7 @@
             "$ref": "../beacon-framework-v2/responses/beaconFilteringTermsResponse.json"
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation.",
             "$ref": "../beacon-framework-v2/responses/beaconErrorResponse.json"
           }
         }
@@ -216,20 +216,20 @@
   "components": {
     "responses": {
       "infoOKResponse": {
-        "description": "Successful operation.\n",
+        "description": "Successful operation.",
         "content": {
           "application/json": {
             "schema":{
-              "description": "Response of a request for information about a Beacon.\n",
+              "description": "Response of a request for information about a Beacon.",
               "type": "object",
               "required": ["meta","response"],
               "properties": {
                 "meta": {
-                  "description": "TBD.\n",
+                  "description": "TBD",
                   "$ref":"../beacon-framework-v2/responses/sections/beaconInformationalResponseMeta.json"
                 },
                 "response": {
-                  "description": "TBD.\n",
+                  "description": "TBD",
                   "$ref":"../beacon-framework-v2/responses/sections/beaconInfoResults.json"
                 }
               }
@@ -247,7 +247,7 @@
         "schema": {
           "type": "string"
         },
-        "example": "ga4gh-service-info-v1.0\n"
+        "example": "ga4gh-service-info-v1.0"
       },
       "skip": {
         "name": "skip",

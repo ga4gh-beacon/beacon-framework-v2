@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "description": "Boolean (true/false) response section.\n",
+  "description": "Boolean (true/false) response section.",
   "type": "object",
   "required": ["exists"],
   "properties": {

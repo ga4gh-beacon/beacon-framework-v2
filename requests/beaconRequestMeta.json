@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "description": "Meta section of the Beacon request. It includes request context details relevant for the Beacon server when processing the request.\n",
+  "description": "Meta section of the Beacon request. It includes request context details relevant for the Beacon server when processing the request.",
   "type": "object",
   "properties": {
     "$schema": {

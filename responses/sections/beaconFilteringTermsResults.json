@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "description": "Filtering terms and ontology resources utilised in this Beacon.\n",
+  "description": "Filtering terms and ontology resources utilised in this Beacon.",
   "type": "object",
   "properties": {
     "resources":{
@@ -22,21 +22,21 @@
   "definitions": {
     "FilteringTerm": {
       "type": "object",
-      "description": "Entities can be filtered using this term.\n",
+      "description": "Entities can be filtered using this term.",
       "required": ["type", "id"],
       "properties": {
         "type": {
           "type": "string",
-          "description": "Either \"custom\", \"alphanumeric\" or ontology/terminology full name.\n",
+          "description": "Either \"custom\", \"alphanumeric\" or ontology/terminology full name.",
           "example": "Human Phenotype Ontology"
         },
         "id": {
-          "description": "The field id in the case of numeric or alphanumeric fields, or the term id in the case of ontology or custom terms. CURIE syntax in the case of an ontology term.\n",
+          "description": "The field id in the case of numeric or alphanumeric fields, or the term id in the case of ontology or custom terms. CURIE syntax in the case of an ontology term.",
           "type": "string",
           "example": "HP:0008773"
         },
         "label": {
-          "description": "This would be the \"preferred Label\" in the case of an ontology term.\n",
+          "description": "This would be the \"preferred Label\" in the case of an ontology term.",
           "type": "string",
           "example": "Aplasia/Hypoplasia of the middle ear"
         }
