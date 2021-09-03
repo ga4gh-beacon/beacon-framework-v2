@@ -29,6 +29,15 @@ The Framework repo includes the elements that are common to all Beacons:
 3. The files of every Beacon root
 4. Examples of all the above (using a fake and simple Model)
 
+
+### Coding and nanimg conventions
+For historical reasons, in the names of entities, parameters and URLs we are following the conventions:
+* Entity names: `PascalCase` 
+* parameters: `camelCase` 
+* URI path elements: `snake_case` 
+The only exception is: `service-info` which is a required GA4GH standard and has a different word separation convention.
+
+
 ## Folder structure in this repo
 The above listed elements are organized in several folders (*in alphabetical order*):
 
