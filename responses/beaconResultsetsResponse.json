@@ -5,7 +5,7 @@
   "properties": {
     "meta": {
       "description": "Information about the response that could be relevant for the Beacon client in order to interpret the results.",
-      "$ref": "https://raw.githubusercontent.com/MrRobb/beacon-framework-v2/main/responses/sections/beaconResponseMeta.json/"
+      "$ref": "https://raw.githubusercontent.com/MrRobb/beacon-framework-v2/main/responses/sections/beaconResponseMeta.json"
     },
     "responseSummary": {
       "description": "Response summary, including Boolean and optionally results count.",
