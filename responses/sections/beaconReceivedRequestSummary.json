@@ -17,6 +17,10 @@
       "description": "Ontology based filters. CURIE syntax is encouraged to be used.",
       "$ref": "../../common/beaconCommonComponents.json#/definitions/Filters"
     },
+    "requestParameters": {
+      "description": "Dictionary of request parameters received in the RequestBody",
+      "$ref": "../../requests/requestParameters.json"
+    },
     "includeResultsetResponses": {
       "$ref": "../../common/beaconCommonComponents.json#/definitions/IncludeResultsetResponses"
     },
