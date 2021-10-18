@@ -10,7 +10,7 @@
   "requestParameters": {
     "individual": {
       "parameters": [
-        {"id":"123"},{"gender":"female"}
+        {"id":"123"}
       ]
     }
   },
