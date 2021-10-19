@@ -46,6 +46,7 @@
   "definitions": {
     "EntryTypes": {
       "description": "This is a dictionary of the entry types implemented in this Beacon instance.",
+      "type": "object",
       "additionalProperties": {
         "type": "object",
         "$ref": "./entryTypeDefinition.json"
