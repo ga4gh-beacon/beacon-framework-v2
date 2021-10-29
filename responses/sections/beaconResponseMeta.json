@@ -14,6 +14,10 @@
     "returnedSchemas": {
       "$ref": "../../common/beaconCommonComponents.json#/definitions/ListOfSchemas"
     },
+    "returnedGranularity": {
+      "description": "Requested granularity. Targeted Beacon could respond or not with the requested granularity. E.g. record level granularity could be requested, but the Beacon could respond only with boolean or count results.",
+      "$ref": "../../common/beaconCommonComponents.json#/definitions/Granularity"
+    },
     "receivedRequestSummary": {
       "description": "Section of the response that summarize the request received as it has been interpreted by teh Beacon server.",
       "$ref": "./beaconReceivedRequestSummary.json"
@@ -23,6 +27,7 @@
     "beaconId",
     "apiVersion",
     "returnedSchemas",
+    "returnedGranularity",
     "receivedRequestSummary"
   ]
 }

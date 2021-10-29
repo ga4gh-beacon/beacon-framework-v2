@@ -22,5 +22,6 @@
   "pagination": {
     "skip": 1,
     "limit": 10
-  }
+  },
+  "requestedGranularity": "count"
 }
