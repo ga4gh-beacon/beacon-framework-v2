@@ -12,5 +12,5 @@
       "$ref": "../../common/beaconCommonComponents.json#/definitions/NumTotalResults"
     }
   },
-  "required": ["exists"]
+  "required": ["exists","numTotalResults"]
 }
