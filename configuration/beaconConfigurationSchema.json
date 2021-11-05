@@ -23,10 +23,8 @@
       "type": "object",
       "properties": {
         "defaultGranularity": {
-          "description": "Default granularity. Some responses could return higher detail, but this would be the granularity by default.- `boolean`: returns 'true/false' responses.\n\n - `count`: adds the total number of positive results found.\n\n - `aggregated`: returns summary, aggregated or distribution like responses.\n\n. - `record`: returns details for every row. The cases where a Beacon prefers to return records with less, not all attributes, different strategies have been considered, e.g.: keep non-mandatory attributes empty, or Beacon to provide a minimal record definition, but these strategies still need to be tested in real world cases and hence no design decision has been taken yet.",
-          "type": "string",
-          "enum": ["boolean", "count", "aggregated", "record"],
-          "default": "boolean"
+          "description": "Default granularity. Some responses could return higher detail, but this would be the granularity by default.",
+          "$ref": "../common/beaconCommonComponents.json#/definitions/Granularity"
         },
         "securityLevels": {
           "description": "All access levels supported by the Beacon. Any combination is valid, as every option would apply to different parts of the Beacon.",
@@ -46,6 +44,7 @@
   "definitions": {
     "EntryTypes": {
       "description": "This is a dictionary of the entry types implemented in this Beacon instance.",
+      "type": "object",
       "additionalProperties": {
         "type": "object",
         "$ref": "./entryTypeDefinition.json"

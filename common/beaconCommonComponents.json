@@ -90,6 +90,12 @@
       "default": 10,
       "example": 10
     },
+    "Granularity": {
+      "description": "Granularity or level of detail of the response. - `boolean`: returns 'true/false' responses.\n\n - `count`: adds the total number of positive results found.\n\n - `aggregated`: returns summary, aggregated or distribution like responses.\n\n. - `record`: returns details for every row. The cases where a Beacon prefers to return records with less, not all attributes, different strategies have been considered, e.g.: keep non-mandatory attributes empty, or Beacon to provide a minimal record definition, but these strategies still need to be tested in real world cases and hence no design decision has been taken yet.",
+      "type": "string",
+      "enum": ["boolean", "count", "aggregated", "record"],
+      "default": "boolean"
+    },
     "IncludeResultsetResponses": {
       "description": "Indicator of whether responses from every Resultset should be included in the response to this request or just the ones with positive, negative results or no details at all. If null (not specified), the default value of 'HIT' is assumed. This parameter allows for returning boolean/counting results although the Beacon instance is capable to return record level details.",
       "type": "string",

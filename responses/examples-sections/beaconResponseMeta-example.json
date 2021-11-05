@@ -5,6 +5,7 @@
   "returnedSchemas": [
     { "entityType": "EntryTypeB", "schema": "entry-typeB-schema-v1.0"}
   ],
+  "returnedGranularity": "count",
   "receivedRequestSummary": {
     "apiVersion": "2.0",
     "requestedSchemas": [
@@ -13,6 +14,7 @@
     "pagination": {
       "skip": 0,
       "limit":10
-    }
+    },
+    "requestedGranularity": "count"
   }
 }
