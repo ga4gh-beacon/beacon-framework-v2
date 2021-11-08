@@ -73,6 +73,18 @@
         },
         "limit": {
           "$ref": "#/definitions/Limit"
+        },
+        "current_page": {
+          "description": "Token of the returned page. To be used only in the response to allow the client to check if the returned page is the one requested.",
+          "$ref": "#/definitions/PageToken"
+        },
+        "next_page": {
+          "description": "Token of the next page. Used to navigate forward. If empty, it is assumed that no more pages are available",
+          "$ref": "#/definitions/PageToken"
+        },
+        "previous_page": {
+          "description": "Token of the previous page. Used to navigate backwards. If empty, it is assumed that the current page is the first one.",
+          "$ref": "#/definitions/PageToken"
         }
       }
     },
@@ -89,6 +101,11 @@
       "minimum": 0,
       "default": 10,
       "example": 10
+    },
+    "PageToken": {
+      "description": "A hash or similar that allows the server to use it as a cursor over a query. It could be or not a readable value, like a word or a key. E.g. it could be an encrypted value of primary keys to navigate next and previous page.",
+      "type": "string",
+      "example": "ab0sc&fe1dd"
     },
     "Granularity": {
       "description": "Granularity or level of detail of the response. - `boolean`: returns 'true/false' responses.\n\n - `count`: adds the total number of positive results found.\n\n - `aggregated`: returns summary, aggregated or distribution like responses.\n\n. - `record`: returns details for every row. The cases where a Beacon prefers to return records with less, not all attributes, different strategies have been considered, e.g.: keep non-mandatory attributes empty, or Beacon to provide a minimal record definition, but these strategies still need to be tested in real world cases and hence no design decision has been taken yet.",
