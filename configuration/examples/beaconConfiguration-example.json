@@ -4,6 +4,7 @@
   "maturityAttributes": {
     "productionStatus": "DEV"
   },
+  "nonFilteredQueriesAreAllowed": true,
   "securityAttributes": {
     "defaultGranularity": "boolean",
     "securityLevels": ["PUBLIC", "REGISTERED", "CONTROLLED"]

@@ -26,6 +26,11 @@
           "description": "Default granularity. Some responses could return higher detail, but this would be the granularity by default.",
           "$ref": "../common/beaconCommonComponents.json#/definitions/Granularity"
         },
+        "nonFilteredQueriesAreAllowed": {
+          "description": "Switch that declares if this Beacon instance allows for queries that does not include elements that restrict returning all the results, like  filters, parameters, ids, etc. The default value is 'true' for backward compatibility and for clarity in the request-response dialog.",
+          "type": "boolean",
+          "default": true
+        },
         "securityLevels": {
           "description": "All access levels supported by the Beacon. Any combination is valid, as every option would apply to different parts of the Beacon.",
           "type": "array",
