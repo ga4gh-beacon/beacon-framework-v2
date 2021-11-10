@@ -1,10 +1,10 @@
 {
-  "$schema": "../beaconConfigurationResponse.json",  
+  "$schema": "../beaconConfigurationResponse.json",
   "meta": {
     "beaconId": "string",
     "apiVersion": "string",
     "returnedSchemas": [
-      { "map": "beacon-configuration-v2.0.0-draft.3" }
+      { "entityType": "info", "schema": "beacon-map-v2.0.0-draft.4" }
     ]
   },
   "response": {
