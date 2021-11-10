@@ -28,7 +28,7 @@
         "aCollectionOf": [{ "id": "exampleEntry", "name": "Example entries" }],
         "endpoint": "/datasets",
         "filteringTermsReference": "./datasets/filteringTerms.json",
-        "additionalSupportedSchemas": []
+        "additionallySupportedSchemas": []
       },
       "exampleEntry": {
         "id": "exampleEntry",

@@ -54,6 +54,9 @@
       "description": "Reference to the file with the list of filtering terms that could be used to filter this concept in this instance of Beacon. The referenced file could be used to populate the `filteringTerms`endpoint. Having it independently should allow for updating the list of accepted filtering terms when it is necessary.",
       "type": "string",
       "$comment": "TO DO: Double-check the proper way of referencing a path or relative path. 'format: uri' is throwing validation errors for relative file paths"
+    },
+    "nonFilteredQueriesAllowed": {
+      "$ref": "../common/beaconCommonComponents.json#/definitions/NonFilteredQueriesAllowed"
     }
   },
   "required": [
