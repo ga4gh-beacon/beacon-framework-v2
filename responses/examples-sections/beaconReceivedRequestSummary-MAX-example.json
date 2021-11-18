@@ -23,5 +23,6 @@
     "skip": 1,
     "limit": 10
   },
+  "testMode": false,
   "requestedGranularity": "count"
 }
