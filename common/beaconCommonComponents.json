@@ -96,6 +96,11 @@
       "enum": ["boolean", "count", "aggregated", "record"],
       "default": "boolean"
     },
+    "NonFilteredQueriesAllowed": {
+      "description": "Switch that declares if this Beacon instance, for a given entry type, admits queries that does not include any element that restrict returning all the results, like filters, parameters, ids, etc. The default value is 'true' for backward compatibility and for clarity in the request-response dialog.",
+      "type": "boolean",
+      "default": true
+    },
     "IncludeResultsetResponses": {
       "description": "Indicator of whether responses from every Resultset should be included in the response to this request or just the ones with positive, negative results or no details at all. If null (not specified), the default value of 'HIT' is assumed. This parameter allows for returning boolean/counting results although the Beacon instance is capable to return record level details.",
       "type": "string",

@@ -27,7 +27,8 @@
       "aCollectionOf": [{ "id": "exampleEntry", "name": "Example entries" }],
       "endpoint": "/datasets",
       "filteringTermsReference": "./datasets/filteringTerms.json",
-      "additionalSupportedSchemas": []
+      "additionallySupportedSchemas": [],
+      "nonFilteredQueriesAllowed": true
     },
     "exampleEntry": {
       "id": "exampleEntry",
@@ -46,7 +47,8 @@
       },
       "endpoint": "./exampleEntries",
       "filteringTermsReference": "./exampleEntry/filteringTerms.json",
-      "additionallySupportedSchemas": []
+      "additionallySupportedSchemas": [],
+      "nonFilteredQueriesAllowed": false
     }
   }
 }
