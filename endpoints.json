@@ -90,19 +90,8 @@
             "content": {
               "application/json": {
                 "schema":{
-                  "description": "Response of a request for information about a Beacon.",
-                  "type": "object",
-                  "required": ["meta","response"],
-                  "properties": {
-                    "meta": {
-                      "description": "TBD",
-                      "$ref":"../beacon-framework-v2/responses/sections/beaconInformationalResponseMeta.json"
-                    },
-                    "response": {
-                      "description": "TBD",
-                      "$ref":"../beacon-framework-v2/configuration/beaconConfigurationSchema.json"
-                    }
-                  }
+                  "description": "Response of a request for information about a Beacon",
+                  "$ref":"../beacon-framework-v2/responses/beaconConfigurationResponse.json"
                 }
               }
             }
@@ -128,19 +117,8 @@
             "content": {
               "application/json": {
                 "schema":{
-                  "description": "Response of a request for the Beacon Map of endpoints.",
-                  "type": "object",
-                  "required": ["meta","response"],
-                  "properties": {
-                    "meta": {
-                      "description": "TBD",
-                      "$ref":"../beacon-framework-v2/responses/sections/beaconInformationalResponseMeta.json"
-                    },
-                    "response": {
-                      "description": "TBD",
-                      "$ref":"../beacon-framework-v2/configuration/beaconMapSchema.json"
-                    }
-                  }
+                  "description": "Response of a request for information about a Beacon",
+                  "$ref":"../beacon-framework-v2/responses/beaconMapResponse.json"
                 }
               }
             }
@@ -166,19 +144,8 @@
             "content": {
               "application/json": {
                 "schema":{
-                  "description": "Response of a request for information about a Beacon.",
-                  "type": "object",
-                  "required": ["meta","response"],
-                  "properties": {
-                    "meta": {
-                      "description": "TBD",
-                      "$ref":"../beacon-framework-v2/responses/sections/beaconInformationalResponseMeta.json"
-                    },
-                    "response": {
-                      "description": "TBD",
-                      "$ref":"../beacon-framework-v2/configuration/beaconConfigurationSchema.json#/definitions/EntryTypes"
-                    }
-                  }
+                  "description": "Response of a request for information about a Beacon",
+                  "$ref": "../beacon-framework-v2/responses/beaconEntryTypesResponse.json"
                 }
               }
             }
@@ -221,18 +188,7 @@
           "application/json": {
             "schema":{
               "description": "Response of a request for information about a Beacon.",
-              "type": "object",
-              "required": ["meta","response"],
-              "properties": {
-                "meta": {
-                  "description": "TBD",
-                  "$ref":"../beacon-framework-v2/responses/sections/beaconInformationalResponseMeta.json"
-                },
-                "response": {
-                  "description": "TBD",
-                  "$ref":"../beacon-framework-v2/responses/sections/beaconInfoResults.json"
-                }
-              }
+              "$ref":"../beacon-framework-v2/responses/beaconInfoResponse.json"
             }
           }
         }
