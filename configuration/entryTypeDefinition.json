@@ -30,7 +30,7 @@
     "partOfSpecification": {
       "description": "This is label to group together entry types that are part of the same specification.",
       "type": "string",
-      "example": "Beacon v2.0-draft3"
+      "example": "Beacon v2.0"
     },
     "defaultSchema": {
       "description": "Description of the default schema used for this concept.",
