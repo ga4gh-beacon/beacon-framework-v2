@@ -6,12 +6,12 @@
     "id": "NCIT:C47824",
     "label": "Data set"
   },
-  "partOfSpecification": "Beacon v2.0-draft3",
+  "partOfSpecification": "Beacon v2.0",
   "defaultSchema": {
     "id": "datasetDefaultSchema",
     "name": "Default schema for datasets",
     "referenceToSchemaDefinition": "./datasets/defaultSchema.json",
-    "schemaVersion": "v.2.draft-3"
+    "schemaVersion": "v.2"
   },
   "aCollectionOf": [{ "id": "exampleEntry", "name": "Example entries" }]
 }

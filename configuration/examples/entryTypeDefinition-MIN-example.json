@@ -6,7 +6,7 @@
     "id": "DUO:0000004",
     "label": "General Research Use"
   },
-  "partOfSpecification": "Beacon v2.draft3",
+  "partOfSpecification": "Beacon v2",
   "defaultSchema": {
     "id": "bdfGenericEntryType-v2",
     "name": "Beacon v2 default schema for a basic element.",

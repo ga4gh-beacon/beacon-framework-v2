@@ -6,13 +6,13 @@
     "id": "NCIT:C47824",
     "label": "Data set"
   },
-  "partOfSpecification": "Beacon v2.0-draft3",
+  "partOfSpecification": "Beacon v2.0",
   "description": "A Dataset is a collection of records, like rows in a database or cards in a cardholder.",
   "defaultSchema": {
     "id": "datasetDefaultSchema",
     "name": "Default schema for datasets",
     "referenceToSchemaDefinition": "./datasets/defaultSchema.json",
-    "schemaVersion": "v.2.draft-3"
+    "schemaVersion": "v.2"
   },
   "aCollectionOf": [{ "id": "exampleEntry", "name": "Example entries" }],
   "endpoint": "/datasets",

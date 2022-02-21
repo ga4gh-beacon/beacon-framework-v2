@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "",
-  "description": "Definition of an element or entry type including the Beacon v2 required and suggested attributes. This schema purpose is to  describe each type of entities included in a Beacon, hence Beacon clients could have some metadata about such entities.\n\nThe ìd`attribute is the key that should be used in other parts of the Beacon Model to allow Beacon clients to identify the different parts (e.g. endpoints, filteringTerms, request parameters, etc.) that fully describe an entry type.",
+  "description": "Definition of an element or entry type including the Beacon v2 required and suggested attributes. This schema purpose is to  describe each type of entities included in a Beacon, hence Beacon clients could have some metadata about such entities.\n\nThe `id` attribute is the key that should be used in other parts of the Beacon Model to allow Beacon clients to identify the different parts (e.g. endpoints, filteringTerms, request parameters, etc.) that fully describe an entry type.",
   "type": "object",
   "$comment": "TO DO: The tagged parts should reference to `common/ontologizedElement.json`. But that configuration fails to validate. Further investigation is required, but should not affect the resulting schema.",
 
@@ -30,7 +30,7 @@
     "partOfSpecification": {
       "description": "This is label to group together entry types that are part of the same specification.",
       "type": "string",
-      "example": "Beacon v2.0-draft3"
+      "example": "Beacon v2.0"
     },
     "defaultSchema": {
       "description": "Description of the default schema used for this concept.",
