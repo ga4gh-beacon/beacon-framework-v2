@@ -12,8 +12,8 @@
       { "$ref": "../beaconCommonComponents.json#/definitions/BeaconError" },
     "listOfSchemas":
       { "$ref": "../beaconCommonComponents.json#/definitions/ListOfSchemas" },
-    "schemasPerEntity": 
-      { "$ref": "../beaconCommonComponents.json#/definitions/SchemasPerEntity" },
+    "SchemasPerEntryType": 
+      { "$ref": "../beaconCommonComponents.json#/definitions/SchemasPerEntryType" },
     "pagination": 
       { "$ref": "../beaconCommonComponents.json#/definitions/Pagination" },
     "includeResultsetResponses": 

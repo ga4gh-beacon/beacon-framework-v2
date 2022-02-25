@@ -3,7 +3,7 @@
   "meta": {
     "apiVersion": "2.0",
     "requestedSchemas": [
-      { "entityType": "EntryTypeA", "schema": "entry-typeA-schema-v0.1"}
+      { "entryType": "EntryTypeA", "schema": "entry-typeA-schema-v0.1"}
     ]
   },
   "query": {

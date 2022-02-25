@@ -4,7 +4,7 @@
     "beaconId": "string",
     "apiVersion": "string",
     "returnedSchemas": [
-      { "entityType": "info", "schema": "beacon-info-v2.0.0" }
+      { "entryType": "info", "schema": "beacon-info-v2.0.0" }
     ]
   },
   "response": {

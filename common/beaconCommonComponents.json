@@ -42,14 +42,14 @@
       "description": "Set of schemas to be used in the response to a request.",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/SchemasPerEntity"
+        "$ref": "#/definitions/SchemasPerEntryType"
       }
     },
-    "SchemasPerEntity": {
+    "SchemasPerEntryType": {
       "description": "Schema to be used for the requested entry type in the response.",
       "type": "object",
       "properties": {
-        "entityType": {
+        "entryType": {
           "type": "string",
           "example": "Individual",
           "$comment": "TO REVIEW: Should that refer to a concept d? or would that include an undesired dependency to the configuration?"
