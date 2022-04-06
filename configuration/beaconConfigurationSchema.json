@@ -31,8 +31,7 @@
           "type": "array",
           "items": {
             "enum": ["PUBLIC", "REGISTERED", "CONTROLLED"],
-            "default": "CONTROLLED",
-            "$comment": "TO DO: Check if values can be made unique."
+            "default": ["CONTROLLED"]
           }
         }
       }
