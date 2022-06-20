@@ -1,8 +1,12 @@
-# beacon-framework-v2
+# ARCHIVED on 2022-06-20
+
+Please see the unified [beacon-v2](https://github.com/ga4gh-beacon/beacon-v2) repository for ongoing Beacon development.
+
+## beacon-framework-v2
 
 Beacon Framework version 2
 
-## Introduction
+### Introduction
 
 The GA4GH Beacon specification is composed by two parts:
 
